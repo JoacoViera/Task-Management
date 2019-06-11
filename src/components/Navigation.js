@@ -6,10 +6,14 @@ class Navigation extends Component {
       <div className="Navigation">
   
         <nav className="navbar navbar-dark bg-dark">
-          <a href="https://getbootstrap.com/docs/4.3/components/navbar/">Navegacion</a>
+          <a href="#" className="text-white">
+
+            {/* Props para enviar atributos a traves del component */}
+            {/* Dentro de estas llaves puedo meter js como un champion */}
+            { this.props.titulo}
+          </a>
         </nav>
-        
-        
+             
       </div>
     );
   }
