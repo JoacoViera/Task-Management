@@ -43,13 +43,13 @@ class App extends Component {
       return (
         <div className="col-md-4" key={i}>
           <div className="card mt-4">
-            <div className="card-header"> 
+            <div className="card-header bg-info"> 
              <h3>{todo.title}</h3>
              <span className="badge badge-pill badge-danger" ml-2>
                {todo.priority}
              </span>
             </div>
-            <div className="card-header"> 
+            <div className="card-header bg-light"> 
               <h3>{todo.description}</h3>
               <p><mark>{todo.responsible}</mark></p>
             </div>
@@ -67,7 +67,7 @@ class App extends Component {
       <div className="App">
         
         <nav className="navbar navbar-dark bg-dark">
-          <a href="#" className="text-white">
+          <a href="https://www.google.com" className="text-white">
             Tasks
             <span className="badge badge-pill badge-light ml-2">
               { this.state.todos.length }

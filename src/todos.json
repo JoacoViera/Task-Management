@@ -1,27 +1,21 @@
 {
     "todos":[
         {
-            "title": "Task 1",
+            "title": "Study Maths",
             "responsible":"Mark",
-            "description": "lorem impsum",
+            "description": "Module 1 & 2",
             "priority": "low"
         },
         {
-            "title": "Task 2",
+            "title": "CSS Exam",
             "responsible":"Ryan",
-            "description": "lorem impsum 2",
+            "description": "Bootsrap",
             "priority": "medium"
         },
         {
-            "title": "Task 3",
+            "title": "Go Gym",
             "responsible":"Joseph",
-            "description": "lorem impsum 3",
-            "priority": "high"
-        },
-        {
-            "title": "Task 4",
-            "responsible":"Elizabeth",
-            "description": "lorem impsum 4",
+            "description": "Triceps",
             "priority": "high"
         }
     ]
