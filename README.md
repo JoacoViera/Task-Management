@@ -1,4 +1,4 @@
-# 💻Task Management App [![saythanks](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://saythanks.io/to/JoacoViera) 
+# 💻Tasks Management App [![saythanks](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://saythanks.io/to/JoacoViera) 
 
 
 My first React project 😍!
