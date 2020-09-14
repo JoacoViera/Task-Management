@@ -2,16 +2,12 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
-// import Navigation from './components/Navigation.js';
 import TodoForm from "./components/TodoForm";
 import { todos } from "./todos.json";
 
 
-
 class App extends Component {
   constructor() {
-    // ESTO SE ADMINISTRA EN MEMORIA PARA MOSTRARSE
-    // Siempre ejectuar super para que herede todos los poderes de react
     super();
     this.state = {
       todos,
@@ -90,7 +86,6 @@ class App extends Component {
           </div>
         </div>
 
-        {/* <Navigation titulo="Tasks" /> */}
       </div>
     );
   }
