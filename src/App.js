@@ -14,30 +14,45 @@ const App = (props) => {
     setTasks([...tasks, todo]);
   }
 
+  const handleTodoTitleColor = (priority) => {
+    let className = "badge badge-pill badge-";
+    if (priority.toLowerCase() === "low") {
+      return className += "success";
+    } else if (priority.toLowerCase() === "medium") {
+      return className += "warning";
+    } else {
+      return className += "danger";
+    }
+  }
+
   const taskComponent = tasks.map((todo, i) => {
     return (
       <div className="col-md-4" key={i}>
         <div className="card mt-4">
           <div className="card-header bg-info">
-            <h3>{todo.title}</h3>
-            <span className="badge badge-pill badge-danger" ml-2>
-              {todo.priority}
+            <h3 style={{ fontWeight: "bold" }}>{todo.title}</h3>
+            <span className={handleTodoTitleColor(todo.priority)} ml-2>
+              {todo.priority.toUpperCase()}
             </span>
           </div>
           <div className="card-header bg-light">
-            <h3>{todo.description}</h3>
-            <p>
+            <p style={{ fontSize: 23 }}>{todo.description}</p>
+            {/* <p>
               <mark>{todo.responsible}</mark>
-            </p>
+            </p> */}
           </div>
           <div className="card-footer">
             <button
               className="btn btn-danger"
               onClick={() => {
-                if (window.confirm("Are you sure you want to delete it?")) {
-                  let t = tasks.filter((e, h) => { return i !== h; });
-                  setTasks(t);
-                }
+                // Delete without confirmation
+                // if (window.confirm("Are you sure you want to delete it?")) {
+                //   let t = tasks.filter((e, h) => { return i !== h; });
+                //   setTasks(t);
+                // }
+                // Delete without confirmation
+                let t = tasks.filter((e, h) => { return i !== h; });
+                setTasks(t);
               }}
             >
               Delete
@@ -54,7 +69,7 @@ const App = (props) => {
         <a href="https://www.google.com" className="text-white">
           Tasks
             <span className="badge badge-pill badge-light ml-2">
-            {todos.length}
+            {tasks.length}
           </span>
         </a>
       </nav>
