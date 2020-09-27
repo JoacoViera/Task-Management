@@ -3,27 +3,26 @@ import React, { useState } from "react";
 const TodoForm = (props) => {
   const { onAddTodo } = props;
   const [title, setTitle] = useState('');
-  const [responsible, setResponsible] = useState('');
   const [description, setDescription] = useState('');
-  const [priority, setPriority] = useState('low');
+  const [priority, setPriority] = useState('Low');
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!title) {
       alert("PLEASE ADD A TITTLE");
-    } else if (!responsible) {
-      alert("PLEASE ADD A RESPONSIBLE");
     } else if (!description) {
       alert("PLEASE ADD A DESCRIPTION");
     } else {
       onAddTodo(
         {
           "title": title,
-          "responsible": responsible,
           "description": description,
           "priority": priority
         }
       );
+      e.target.title.value = '';
+      e.target.description.value = '';
+      e.target.priority.value = 'Low';
     }
   }
 
@@ -32,8 +31,6 @@ const TodoForm = (props) => {
     const { value, name } = e.target;
     if (name === 'title') {
       setTitle(value)
-    } else if (name === 'responsible') {
-      setResponsible(value);
     } else if (name === 'description') {
       setDescription(value);
     } else if (name === 'priority') {
@@ -58,15 +55,6 @@ const TodoForm = (props) => {
         <div className="form-group">
           <input
             type="text"
-            name="responsible"
-            onChange={handleInput}
-            className="form-control"
-            placeholder="Responsible"
-          />
-        </div>
-        <div className="form-group">
-          <input
-            type="text"
             name="description"
             onChange={handleInput}
             className="form-control"
@@ -79,9 +67,9 @@ const TodoForm = (props) => {
             className="form-control"
             onChange={handleInput}
           >
-            <option>low</option>
-            <option>medium</option>
-            <option>high</option>
+            <option>Low</option>
+            <option>Medium</option>
+            <option>High</option>
           </select>
         </div>
         <button type="submit" className="btn btn-primary">

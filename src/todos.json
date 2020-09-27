@@ -1,22 +1,19 @@
 {
-    "todos":[
+    "todos": [
         {
             "title": "Study Maths",
-            "responsible":"Mark",
             "description": "Module 1 & 2",
-            "priority": "low"
+            "priority": "LOW"
         },
         {
             "title": "CSS Exam",
-            "responsible":"Ryan",
             "description": "Bootsrap",
-            "priority": "medium"
+            "priority": "MEDIUM"
         },
         {
             "title": "Go Gym",
-            "responsible":"Joseph",
             "description": "Triceps",
-            "priority": "high"
+            "priority": "HIGH"
         }
     ]
 }
